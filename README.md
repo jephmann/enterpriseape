@@ -26,3 +26,6 @@ Ut viverra volutpat tristique. Vestibulum at sodales erat. Donec quis dictum era
 2. Precision
 3. Performance
 
+This is what Ruby code would look like `puts 'Hello World'`
+
+
