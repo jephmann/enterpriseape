@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Enterpriseape</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <%= link_to "Home", root_path %>
-  <%= link_to "About Us", root_path %>
-  <%= link_to "Contact", root_path %>
-  <%= link_to "Features", root_path %>
-  <%= link_to "FAQs", root_path %>
-  <%= link_to "Pricing", root_path %>
-  <%= link_to "Login", root_path %>
-<%= yield %>
-
-</body>
+  <head>
+    <title>Enterpriseape</title>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="container">
+      <ul class="nav nav-tabs">  
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "About Us", root_path %></li>
+        <li><%= link_to "Contact", root_path %></li>
+        <li><%= link_to "Features", root_path %></li>
+        <li><%= link_to "FAQs", root_path %></li>
+        <li><%= link_to "Pricing", root_path %></li>
+        <li><%= link_to "Login", root_path %></li>
+      </ul>
+      <%= yield %>
+    </div>
+  </body>
 </html>
