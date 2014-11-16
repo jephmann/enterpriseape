@@ -1,3 +1,5 @@
+<div Class="row">
+
 <%= form_for(@invoice) do |f| %>
   <% if @invoice.errors.any? %>
     <div id="error_explanation">
@@ -23,11 +25,21 @@
     <%= f.label :tax %><br>
     <%= f.text_field :tax %>
   </div>
-  <div class="field">
-    <%= f.label :salesperson %><br>
-    <%= f.text_field :salesperson %>
+  <div class="control-group">
+    <%= f.label :employee_id, class: 'control-label' %>
+    <div class="controls">
+      <%= collection_select( :invoice, :employee_id, Employee.all, :id, :name, {}, { :multiple => false } ) %>      
+    </div>    
+  </div>  
+  <div class="control-group">
+    <%= f.label "Status", class: 'control-label' %>
+    <div class="controls">
+      <%= f.select(:status_type, options_for_select([['PAID','PAID'],['PENDING','PENDING']]), { include_blank: true }) %>
+    </div>    
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+  
+</div> 

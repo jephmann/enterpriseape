@@ -15,8 +15,13 @@
         <li><%= link_to "Features", root_path %></li>
         <li><%= link_to "FAQs", root_path %></li>
         <li><%= link_to "Pricing", root_path %></li>
+        <li><%= link_to "Invoices", invoices_path %></li>
+        <li><%= link_to "Companies", companies_path %></li>
+        <li><%= link_to "Employees", employees_path %></li>
         <li><%= link_to "Login", root_path %></li>
       </ul>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
       <%= yield %>
     </div>
   </body>

@@ -17,7 +17,12 @@
 
 <p>
   <strong>Salesperson:</strong>
-  <%= @invoice.salesperson %>
+  <%= @invoice.employee.name %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @invoice.status_type %>
 </p>
 
 <%= link_to 'Edit', edit_invoice_path(@invoice) %> |
